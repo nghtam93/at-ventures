@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap');
+
+@import "../libs/bootstrap/css/bootstrap.css";
+
+@import "_mixin/function";
+@import "_mixin/base";
+@import "_mixin/common";
+
+// Component
+@import "_components/animate";
+@import "_components/base";
+@import "_components/header";
+@import "_components/menu";
+@import "_components/general";
+// Page
+
+@import "_pages/home";
