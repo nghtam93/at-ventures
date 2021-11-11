@@ -15,10 +15,18 @@
 		opacity: 0.3;
 		transform: matrix(1, 0, 0, -1, 0, 0);
 	}
+	&.is-active{
+		background: #171C20;
+		// animation:stuckMoveDown .6s;
+	}
 	.logo{
 		margin-bottom: 0;
 		img{
 			max-height: 50px;
 		}
 	}
+}
+@keyframes stuckMoveDown{
+    0%{transform:translateY(-100%)}
+    100%{transform:translateY(0)}
 }

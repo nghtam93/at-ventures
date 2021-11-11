@@ -25,10 +25,10 @@ $font-color: #fff;
     }
     a{
         color: $font-color;
+        transition: all 0.3s;
     }
     .el__menu{
         padding:0px 0;
-        transition:padding .5s;
         background:none;
         &:after{
             content:"";display:table;clear:both;
@@ -56,6 +56,7 @@ $font-color: #fff;
                 position: relative;
                 padding: 30px 20px;
                 display: block;
+
                 &:before{
                     // content:"";
                     // position:absolute;
