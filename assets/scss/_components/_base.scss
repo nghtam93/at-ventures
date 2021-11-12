@@ -2,7 +2,9 @@ $color_primary:#5FC4E6;$color_secondary:#BEE274;
 .-color-primary{color:$color_primary;}
 
 /**/
-
+body{
+    --header-height:80px;
+}
 /* Slider */
 
 .slickfix .slick-list{margin:0 -50px;}
