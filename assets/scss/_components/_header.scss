@@ -21,24 +21,12 @@
 	}
 	.logo{
 		margin-bottom: 0;
+		transition: opacity .5s;
 		img{
 			max-height: 50px;
 		}
 	}
 
-	&.open-search{
-	    background: #171C20;
-	    .main__nav {
-	        opacity: 0;
-	        z-index: -1;
-	    }
-	    .search-field{
-	        width: 350px;
-	        right: 50px;
-	        opacity: 1;
-	        background: transparent;
-	    }
-	}
 	.header__search{
 	    position: relative;
 	    margin-left:25px;
@@ -76,6 +64,19 @@
 	        }
 	    }
 	}
+	&.open-search{
+	    background: #171C20;
+	    .main__nav {
+	        opacity: 0;
+	        z-index: -1;
+	    }
+	    .search-field{
+	        width: 350px;
+	        right: 50px;
+	        opacity: 1;
+	        background: transparent;
+	    }
+	}
 
 	@media (max-width: 991px){
 		padding: 18px 0;
@@ -88,6 +89,16 @@
 		    img{
 		    	max-height: 40px;
 		    }
+		}
+	}
+	@media (max-width: 575px){
+		&.open-search{
+			.logo{
+				opacity: 0;
+			}
+			.search-field {
+			    width: 220px;
+			}
 		}
 	}
 }

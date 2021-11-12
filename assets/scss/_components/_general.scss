@@ -46,8 +46,8 @@
     @media (max-width: 991px){
         .sc__header__title {
             font-size: 26px;
-            line-height: 39px;
-            padding: 15px 50px;
+            line-height: 32px;
+            padding: 8px 50px;
         }
     }
     @media (max-width: 767px){
@@ -75,3 +75,22 @@
         width: 100%;
     }
 }
+// Effect border
+.ef--border{
+    --border-color: #FFB901;
+    position: relative;
+    &::before, &::after{
+        box-sizing:border-box;content:'';position:absolute;top:0;left:0;height:100%;width:100%;transform-origin:center;
+        transition: all .7s;
+    }
+    &::before{
+        border-top:1px solid var(--border-color);border-bottom:1px solid var(--border-color);transform:scale3d(0,1,1);z-index:1;
+    }
+    &::after{
+        border-left:1px solid var(--border-color);border-right:1px solid var(--border-color);transform:scale3d(1,0,1)
+    }
+    &:hover::before,&:hover::after{transform:scale3d(1,1,1);transition:transform 0.5s}
+}
+
+
+

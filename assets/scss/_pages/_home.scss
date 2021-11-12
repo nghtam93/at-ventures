@@ -3,6 +3,7 @@
     padding: 21% 0px;
     background: url(../img/home-banner-bg.jpg) no-repeat;
     background-size:cover;
+    overflow: hidden;
     .el{
         &__meta {
             position: absolute;
@@ -35,6 +36,12 @@
             line-height: 50px;
         }
     }
+    @media (max-width: 767px){
+        .el__title {
+            font-size: 24px;
+            line-height: 38px;
+        }
+    }
 }
 .home-intro{
     position: relative;
@@ -50,6 +57,10 @@
         background-size: contain;
         background-position: top right;
         pointer-events:none;
+    }
+    .container{
+        position: relative;
+        z-index: 1;
     }
     .sc__header{
         margin-bottom: 60px;
@@ -76,6 +87,7 @@
             margin-top: 100px;
         }
         &__box{
+            position: relative;
             width: 100%;
             padding: 30px 30px 30px 40px;
             margin-bottom: 30px;
@@ -101,7 +113,6 @@
             }
             &:hover{
                 background-color:#1B1C22;
-                border-color: #05D9A3;
             }
         }
     }
@@ -174,6 +185,7 @@
     &-slider{
         padding-bottom:70px;
         .slick-arrow {
+            top: calc(50% - 35px);
             --arrow: 30px;
         }
         &:before, &:after {
@@ -248,13 +260,15 @@
         height: 182%;
         background: url(../img/home-news-bg-left.png) no-repeat;
         background-size: contain;
-        background-position: top left;;
+        background-position: top left;
+        z-index: -1;
+        pointer-events:none;
     }
     .sc__header{
         margin-bottom: 60px;
     }
     &-slider{
-        padding-bottom:40px;
+        padding: 0 1px 40px
     }
     .el__item{
         padding:20px 20px 30px;
@@ -282,7 +296,6 @@
         }
         &:hover{
             background: #212527;
-            border-color: #FFB901;
         }
     }
     @media (max-width: 991px){
@@ -326,6 +339,11 @@
             line-height: 34px;
             color: #737479;
             margin-right: 30px;
+            transition: all .5s;
+            &:hover{
+                color: #FFB901;
+                text-shadow: 0px 0px 10px #f09e51;
+            }
         }
     }
     @media (max-width: 767px){
