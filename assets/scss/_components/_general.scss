@@ -42,7 +42,16 @@
                 border-width:0 1px 1px 0;
             }
         }
-
+    }
+    @media (max-width: 991px){
+        .sc__header__title {
+            font-size: 26px;
+            line-height: 39px;
+            padding: 15px 50px;
+        }
+    }
+    @media (max-width: 767px){
+        text-align: center;
     }
 }
 .sc__readmore{
@@ -61,5 +70,8 @@
     &:hover{
         color: #FFB901;
         background:transparent;
+    }
+    @media (max-width: 767px){
+        width: 100%;
     }
 }

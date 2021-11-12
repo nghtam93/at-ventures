@@ -36,31 +36,6 @@ $(document).ready(function(){
         }
     });
 
-
-
-
-
-    // $('#search').on("click",(function(e){
-    //   $(".form-group").addClass("sb-search-open");
-    //     e.stopPropagation()
-    // }));
-
-    // $(document).on("click", function(e) {
-    //     if ($(e.target).is("#search") === false && $(".form-control").val().length == 0) {
-    //       $(".form-group").removeClass("sb-search-open");
-    //     }
-    // });
-
-    // $(".form-control-submit").click(function(e){
-    //       $(".form-control").each(function(){
-    //         if($(".form-control").val().length == 0){
-    //           e.preventDefault();
-    //           $(this).css('border', '2px solid red');
-    //         }
-    //     })
-    // })
-
-
     //-------------------------------------------------
     // Menu
     //-------------------------------------------------
@@ -75,8 +50,8 @@ $(document).ready(function(){
         $('.nav__mobile').addClass('active')
     });
 
+    //back to top
     var back_to_top=$(".back-to-top"),offset=220,duration=500;
-
     $(document).on("click",".back-to-top",function(o){
         return o.preventDefault(),$("html, body").animate({scrollTop:0},duration),!1
     });
@@ -85,6 +60,7 @@ $(document).ready(function(){
     if($('body').hasClass( "home" )){
 
         new WOW().init();
+
         $('.home-solution-slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -93,7 +69,36 @@ $(document).ready(function(){
             centerMode: true,
             variableWidth: true,
             prevArrow: '<span class="icon-arrow-left slick-prev slick-arrow"></span>',
-            nextArrow: '<span class="icon-arrow-right slick-next slick-arrow"></span>'
+            nextArrow: '<span class="icon-arrow-right slick-next slick-arrow"></span>',
+            responsive: [
+                {
+                  breakpoint: 1250,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                    variableWidth: false,
+                    arrows: false
+                  }
+                }
+            ]
+        });
+
+        $('.home-news-slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: true,
+            arrows: false,
+            easing: "linear",
+            responsive: [
+                {
+                  breakpoint: 767,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                  }
+                }
+            ]
         });
     }
 
