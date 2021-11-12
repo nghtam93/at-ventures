@@ -57,4 +57,9 @@
     color: #17181D;
     background: linear-gradient(90deg, #FFB901 -3.98%, #EB8D00 105.97%);
     border: 1px solid #FFB901;
+    transition: all .5s;
+    &:hover{
+        color: #FFB901;
+        background:transparent;
+    }
 }

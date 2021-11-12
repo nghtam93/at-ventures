@@ -1,10 +1,9 @@
 .home-banner{
+    position: relative;
     padding: 21% 0px;
     background: url(../img/home-banner-bg.jpg) no-repeat;
     background-size:cover;
-
     .el{
-
         &__meta {
             position: absolute;
             top: 0;
@@ -40,7 +39,7 @@
 }
 .home-intro{
     position: relative;
-    padding:70px 70px;
+    padding:100px 70px;
     &:before {
         content: '';
         position: absolute;
@@ -69,8 +68,9 @@
             margin-bottom: 30px;
         }
         &__excerpt{
-            p{
-                margin-bottom: 20px;
+            margin-bottom: 40px;
+            p+p{
+                margin-top: 20px;
             }
         }
         &__boxs{
@@ -109,6 +109,9 @@
 }
 
 .home-solution{
+    position: relative;
+    padding-bottom:165px;
+    z-index: 1;
     .el{
         &__title{
             font-family: Montserrat;
@@ -120,7 +123,16 @@
             margin-bottom: 60px;
         }
         &__item{
-            margin-bottom: 50px;
+            max-width: 1224px;
+
+            .dnfix__thumb {
+                padding-top: 58.5%;
+            }
+
+            &__meta{
+                padding:65px 75px;
+                background: linear-gradient(166.99deg, #212527 -3.78%, #17181D 111.21%);
+            }
             &__title{
                 margin-bottom: 20px;
                 .-number{
@@ -138,13 +150,64 @@
             }
         }
     }
+    &-slider{
+        .slick-arrow {
+            --arrow: 30px;
+        }
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 16%;
+            height: 100%;
+            z-index: 1;
+            background: linear-gradient(to right, #17181D 41.56%, rgba(23, 24, 29, 0) 99.29%);
+        }
+        &:after{
+            left: auto;
+            right: 0;
+            transform: rotate(180deg);
+        }
+    }
+    @media (max-width: 1199px){
+        .el__item{
+            max-width: 960px;
+        }
+        .el__item__meta {
+            padding: 40px 30px;
+        }
+    }
+    @media (min-width: 1400px){
+        .slick-arrow {
+            --arrow: calc( (100% - 1224px)/2 - 70px );
+        }
+    }
 }
 
 .home-news{
-    padding: 40px 0 130px;
+    position: relative;
+    padding: 50px 0 130px;
+    &:before{
+        content: '';
+        position: absolute;
+        top: -80%;
+        left: 0;
+        width: 48%;
+        height: 182%;
+        background: url(../img/home-news-bg-left.png) no-repeat;
+        background-size: contain;
+        background-position: top left;;
+    }
+    .sc__header{
+        margin-bottom: 60px;
+    }
     .el__item{
         padding:20px 20px 30px;
         background: #1B1C22;
+        margin-bottom: 40px;
+        border:1px solid transparent;
+        transition: all .5s;
         &__thumb{
             margin-bottom: 20px;
         }
@@ -153,24 +216,26 @@
             font-size: 12px;
             line-height: 24px;
             letter-spacing: 0.05em;
+            color: #05D9A3;
+            margin-bottom: 10px;
+        }
+        &__title{
+            font-family: Roboto;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0.05em;
             color: #FFFFFF;
         }
-    }
-    .el__readmore{
-        min-width: 175px;
-        display: inline-block;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 24px;
-        padding: 10px 15px;
-        letter-spacing: 0.05em;
-        text-align: center;
-        color: #17181D;
-        background: #FFB901;
+        &:hover{
+            background: #212527;
+            border-color: #FFB901;
+        }
     }
 }
 
 .footer{
+    position: relative;
     font-family: Roboto;
     font-weight: 300;
     font-size: 12px;
@@ -178,12 +243,16 @@
     padding: 60px 0;
     text-align: center;
     color: #7E7E7E;
-    background: #1B1C22;
+    background: linear-gradient(186deg, #2E3734 -27.37%, #1B2321 -27.36%, #17181D 54.04%);
+    .container{
+        position: relative;
+    }
     &__logo{
         margin-bottom: 40px;
     }
     &__excerpt{
-        margin-bottom: 40px;
+        max-width: 675px;
+        margin: 0 auto 40px;
     }
     &__socical{
         display: flex;

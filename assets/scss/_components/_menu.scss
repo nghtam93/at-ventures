@@ -12,6 +12,7 @@ $font-color: #fff;
     font-size: 16px;
     line-height: 20px;
     color: #FFFFFF;
+    transition: opacity .5s;
     &:after{
         content:"";
         display:table;
@@ -25,7 +26,7 @@ $font-color: #fff;
     }
     a{
         color: $font-color;
-        transition: all 0.3s;
+        transition: background 0.3s;
     }
     .el__menu{
         padding:0px 0;
@@ -247,7 +248,7 @@ $font-color: #fff;
 /**/
 .menu-mb__btn{
     display: block;
-        height: 22px;
+        height: 38px;
 }
 // .menu-mb__btn .icon-bar{width:26px;
 //     transition:all 0.2s;-webkit-transition:all 0.2s;-moz-transition:all 0.2s;-ms-transition:all 0.2s;-o-transition:all 0.2s;
