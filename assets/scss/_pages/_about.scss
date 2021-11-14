@@ -79,12 +79,11 @@
 		}
 		.about-slider{
 			padding: 15px 0 30px;
-			margin-bottom: 50px;
-			// overflow: inherit;
-			.slick-arrow {
-	            --arrow: -30px;
-	            font-size: 20px;
-	        }
+			margin-top: -30px;
+			margin-bottom: 80px;
+	        .slick-dots li {
+			    margin: 0px 10px;
+			}
 		}
 		.el3{
 			&__header__title{
