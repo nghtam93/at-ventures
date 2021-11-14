@@ -45,9 +45,15 @@ $(document).ready(function(){
     });
     $('.menu-mb__btn').click(function(e){
         e.preventDefault()
-        $('body').addClass('modal-open')
-        // $('.menu-mb__btn').addClass('active')
-        $('.nav__mobile').addClass('active')
+        if($('body').hasClass('modal-open')){
+            $('.menu-mb__btn').removeClass('active')
+            $('.nav__mobile').removeClass('active')
+            $('body').removeClass('modal-open')
+        }else{
+            $('.menu-mb__btn').addClass('active')
+            $('body').addClass('modal-open')
+            $('.nav__mobile').addClass('active')
+        }
     });
 
     //back to top
