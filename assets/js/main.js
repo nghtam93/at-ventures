@@ -108,6 +108,21 @@ $(document).ready(function(){
         });
     }
 
+    if($('body').hasClass( "about" )){
+        $('.about-slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: true,
+            arrows: false,
+            easing: "linear",
+            prevArrow: '<span class="icon-arrow-left slick-prev slick-arrow"></span>',
+            nextArrow: '<span class="icon-arrow-right slick-next slick-arrow"></span>',
+            autoplay: true,
+            autoplaySpeed: 2000,
+        });
+
+    }
+
 });
 
 

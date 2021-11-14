@@ -77,6 +77,15 @@
 				}
 			}
 		}
+		.about-slider{
+			padding: 15px 0 30px;
+			margin-bottom: 50px;
+			// overflow: inherit;
+			.slick-arrow {
+	            --arrow: -30px;
+	            font-size: 20px;
+	        }
+		}
 		.el3{
 			&__header__title{
 				font-family: Montserrat;
@@ -154,4 +163,5 @@
 			}
 		}
 	}
+
 }

@@ -1125,6 +1125,12 @@ br.tb {
     .about-content .el2__number .-number {
       font-size: 54px;
       line-height: 54px; }
+  .about-content .about-slider {
+    padding: 15px 0 30px;
+    margin-bottom: 50px; }
+    .about-content .about-slider .slick-arrow {
+      --arrow: -30px;
+      font-size: 20px; }
   .about-content .el3__header__title {
     font-family: Montserrat;
     font-weight: normal;
