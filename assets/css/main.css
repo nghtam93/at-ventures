@@ -1135,7 +1135,7 @@ br.tb {
     font-family: Montserrat;
     font-weight: normal;
     font-size: 24px;
-    line-height: 24px;
+    line-height: normal;
     text-align: center;
     color: #FFFFFF;
     margin-bottom: 50px; }
