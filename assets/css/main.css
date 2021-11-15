@@ -273,7 +273,7 @@ br.tb {
   .header:before {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: 2px;
     left: 0;
     width: 100%;
     height: 1px;
@@ -437,10 +437,11 @@ br.tb {
       text-align: left;
       border-radius: 10px; }
       .main__nav .el__menu .sub-menu li {
+        position: relative;
         line-height: 20px;
-        padding: 13px 15px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        position: relative; }
+        padding: 13px 15px; }
+        .main__nav .el__menu .sub-menu li:not(:last-child) {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
         .main__nav .el__menu .sub-menu li:hover {
           background-color: #252A2B; }
           .main__nav .el__menu .sub-menu li:hover > a {

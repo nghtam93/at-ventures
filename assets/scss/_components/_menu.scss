@@ -88,7 +88,11 @@ $font-color: #fff;
             left:0px;top:100%;z-index:99;text-align:left;
             border-radius: 10px;
             li{
-                line-height:20px;padding:13px 15px;border-bottom:1px solid rgba(255,255,255,0.1);position:relative;
+                position:relative;
+                line-height:20px;padding:13px 15px;
+                &:not(:last-child){
+                    border-bottom:1px solid rgba(255,255,255,0.1);
+                }
                 &:hover{
                     background-color:#252A2B;
                     &>a{
