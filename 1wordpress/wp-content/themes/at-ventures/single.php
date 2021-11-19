@@ -7,14 +7,30 @@
  * @version 1.0
  */
 get_header(); ?>
-<div class="wrap__page -news">
+<div class="single__wrap">
+
+    <section class="single__header">
+      <div class="container">
+        <div class="dn__breadcrumb" typeof="BreadcrumbList" vocab="https://schema.org/">
+            <?php if(function_exists('bcn_display'))bcn_display();?>
+        </div>
+      </div>
+    </section>
+
+    <section class="single-content">
+        <div class="container">
+            <div class="el__header">
+              <h1 class="entry-title"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></h1>
+              <div class="single__date"><?php echo get_the_time("d/m/Y"); ?></div>
+            </div>
+
+            <div class="entry-content"><?php the_content(); ?></div>
+        </div>
+    </section>
+
+
     <div class="container">
         <main class="site-main" role="main">
-
-
-            <div class="dn__breadcrumb" typeof="BreadcrumbList" vocab="https://schema.org/">
-                <?php if(function_exists('bcn_display'))bcn_display();?>
-            </div>
 
             <div class="row">
                 <div class="col-12 col-lgb-27">

@@ -297,4 +297,8 @@
         line-height: 17px;
         color: #9A9A9A;
     }
+    [class^="icon-"], [class*=" icon-"]{
+        position: relative;
+        top: 1px;
+    }
 }
