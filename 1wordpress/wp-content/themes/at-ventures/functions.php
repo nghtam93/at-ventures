@@ -20,10 +20,7 @@ function dntheme_setup() {
 
     // This theme uses wp_nav_menu() in two locations.
     register_nav_menus( array(
-        'primary'            => __( 'Main Menu', 'dntheme' ),
-        'footer_nav1'        => __( 'Footer 1', 'dntheme' ),
-        'footer_nav2'        => __( 'Footer 2', 'dntheme' ),
-        'footer_nav3'        => __( 'Footer 3', 'dntheme' ),
+        'primary'            => __( 'Main Menu', 'dntheme' )
     ) );
 
     add_theme_support( 'html5', array(
