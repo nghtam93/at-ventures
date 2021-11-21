@@ -93,6 +93,7 @@
     &::before, &::after{
         box-sizing:border-box;content:'';position:absolute;top:0;left:0;height:100%;width:100%;transform-origin:center;
         transition: all .7s;
+        pointer-events: none;
     }
     &::before{
         border-top:1px solid var(--border-color);border-bottom:1px solid var(--border-color);transform:scale3d(0,1,1);z-index:1;
@@ -110,7 +111,7 @@
     text-align: center;
     background:url(../img/page-header-bg.jpg) no-repeat;
     background-size:cover;
-    .entry-title{
+    .entry-title, .page-title{
         font-family: Montserrat;
         font-weight: 600;
         font-size: 40px;
@@ -177,7 +178,41 @@
         padding:40px 0;
     }
 }
+/* Papge Search*/
+.box-search{
+    max-width: 500px;
+    margin: 0 auto 30px;
 
+    form{
+        position: relative;
+    }
+    .search-field{
+        height: 48px;
+    }
+    .search-submit{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #0ec197;
+        color: #fff;
+        border: 0;
+        height: 100%;
+        padding: 4px 30px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+}
+/*Page 404*/
+.error404{
+   .error-404{
+        padding: 100px 0;
+        a{
+            color: #fff;
+        }
+    }
+}
+
+/**/
 .new__item{
     position: relative;
     padding:20px 20px 30px;
@@ -261,5 +296,9 @@
         font-size: 14px;
         line-height: 17px;
         color: #9A9A9A;
+    }
+    [class^="icon-"], [class*=" icon-"]{
+        position: relative;
+        top: 1px;
     }
 }

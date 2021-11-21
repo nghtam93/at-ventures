@@ -12,12 +12,12 @@ $(document).ready(function(){
     //-------------------------------------------------
     // Header Search
     //-------------------------------------------------
-    var $headerSearch = $('.header__search');
-    var $headerSearchToggle = $('.search-submit');
+    var $headerSearch = $('.header .search-form');
+    var $headerSearchToggle = $('.header .search-submit');
 
 
     $headerSearchToggle.click(function(e){
-        if($(".search-field").val().length == 0){
+        if($(".header .search-field").val().length == 0){
           e.preventDefault();
           e.stopPropagation()
         }

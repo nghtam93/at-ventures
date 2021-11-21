@@ -132,13 +132,9 @@
 			padding: 70px 180px;
 			text-align: center;
 			border: 1px solid #05D9A3;
-			.el4__thumb{
+			p:not(:last-child){
 				margin-bottom: 30px;
 			}
-			.dnfix__thumb {
-			    padding-top: 56%;
-			}
-
 		}
 		@media (max-width: 1199px){
 			.el__excerpt{

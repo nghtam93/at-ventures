@@ -1,7 +1,7 @@
 .home-banner{
     position: relative;
     padding: 21% 0px;
-    background: url(../img/home-banner-bg.jpg) no-repeat;
+    background-repeat: no-repeat;
     background-size:cover;
     overflow: hidden;
     .el{
@@ -161,6 +161,7 @@
     position: relative;
     padding-bottom:95px;
     z-index: 1;
+    overflow: hidden;
     .el{
         &__title{
             font-family: Montserrat;
@@ -327,7 +328,7 @@
         align-items:center;
         justify-content: center;
         font-size: 28px;
-        margin-bottom: 25px;
+        padding-bottom: 25px;
         a{
             display: block;
             line-height: 34px;

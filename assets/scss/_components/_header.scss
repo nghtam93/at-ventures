@@ -18,17 +18,17 @@
 	}
 	&.is-active{
 		background: #171C20;
-		// animation:stuckMoveDown .6s;
 	}
 	.logo{
 		margin-bottom: 0;
 		transition: opacity .5s;
 		img{
+			width: auto;
 			max-height: 50px;
 		}
 	}
 
-	.header__search{
+	.search-form{
 	    position: relative;
 	    margin-left:25px;
 	    font-size:20px;
@@ -81,7 +81,7 @@
 
 	@media (max-width: 991px){
 		padding: 18px 0 19px;
-		.header__search{
+		.search-form{
 			margin-left: auto;
 		}
 		.logo {
